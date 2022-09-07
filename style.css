@@ -1,0 +1,177 @@
+:root {
+  --marge : 30px;
+}
+
+body {margin: 0;}
+figure {margin: 0;}
+nav {background-color: lightgrey;
+     margin-left: 0%;}
+
+h1 {margin-left: 20%;text-decoration:underline;}}
+h2 {margin-left: 25%;}
+h3 {margin-left: 25%;text-decoration:underline;}
+h4 {margin-left: 30%;}
+a {margin-left: 2%;}
+
+
+
+
+
+  
+/* GRID ////////////////////////////////////////////////////////////////*/
+
+
+
+.interface {
+  display: grid;
+  grid-row-gap: var(--marge);
+  grid-column-gap: var(--marge);
+  margin-bottom: var(--marge);
+  grid-template-columns: 20% 90%;
+}
+
+
+
+.mySlides{
+  width: 40%;
+  margin-left: 22%
+}
+
+
+.grid {margin: var(--marge);}
+.grid figure img {
+  width: 100%;
+  height: auto;
+}
+
+.grid figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-fig img {
+  width: 60% !important;
+}
+
+.small-fig2 img {
+  width: 70% !important;
+}
+
+.small-fig img {
+  width: 40% !important;
+}
+
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {
+  display: grid;
+  grid-row-gap: var(--marge);
+  grid-column-gap: var(--marge);
+  margin-bottom: 60px;
+}
+
+
+
+
+.grid-1 {
+  grid-template-columns: auto;
+}
+.grid-2 {
+  grid-template-columns: auto auto;
+}
+.grid-3 {
+  grid-template-columns: auto auto auto;
+}
+.grid-4 {
+  grid-template-columns: auto auto auto auto;
+}
+.grid-5 {
+  grid-template-columns: auto auto auto auto auto;
+}
+
+
+
+
+
+/* SCROLL HORINZONTAL ////////////////////////////////////////////////////////////////*/
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.scroll-item {
+ height: 100vh;
+ margin: 0 0 var(--marge) auto;
+ display: inline-block;
+ transform: rotate(90deg) translateY(-100vh); /* vh = c'est la largeur visible de l'écran permet de tourner
+*/
+ transform-origin: top left; padding: 0;
+}
+.scroll-item img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.horizon {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+}
+
+
+.horizon section {
+  margin-top: var(--marge);
+}
+/*  //////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+/*  ////////////////////////////// RESPONSIVE ////////////////////////////////////// */
+
+
+@media screen and (max-width:614px) { 
+.grid {margin: 0;}
+
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5 {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.grid-1 figure, .grid-2 figure, .grid-3 figure, .grid-4 figure, .grid-5 figure {
+  margin-bottom: var(--marge);
+}
+
+.small-fig img {
+  width: 100% !important;
+}
+
+.scroll-item {
+ height: auto;
+ margin: 0 0 var(--marge) 0;
+ display: inline-block;
+ transform: rotate(0deg) translateY(0vh);
+ transform-origin: top left; 
+}
+.horizon {
+  width: 100vw;
+  height: 100vh;
+  transform: rotate(0deg) translateX(0vh);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.horizon section {
+  margin-top: var(--marge);
+}
+}
+
+
+
+
